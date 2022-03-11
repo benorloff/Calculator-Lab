@@ -1,6 +1,9 @@
 body {
 }
 
+button {
+}
+
 .calc-container {
 }
 
@@ -19,9 +22,6 @@ body {
 .calc-buttons {
 }
 
-.btn-row-1 {
-}
-
 .brown {
 }
 
@@ -29,6 +29,9 @@ body {
 }
 
 .orange {
+}
+
+.btn-row-1 {
 }
 
 .btn-row-2 {
