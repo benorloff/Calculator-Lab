@@ -25,12 +25,14 @@ const btn = {
     Equal: document.getElementById('btnEqual')
 }
 
+const nonInputVals = ['CE', 'C', '=']
+
 // Declare the result span
 const result = document.getElementById('result');
 
 //Set initial result of zero
 let initialOutput = 0;
-let output = '';
+let output = 0;
 result.innerText = initialOutput;
 
 
@@ -46,16 +48,9 @@ document.addEventListener('click', function buttonClick(e) {
             } else if ((e.target.value === 'C') || (e.target.value === 'CE')) {
                 result.innerText = 0;
             } else if (e.target.value === '=') {
-                console.log('The equal sign was pressed');
+                console.log(eval(result.innerText.valueOf()));
+                result.innerText = (eval(result.innerText.valueOf()));
             }
-        }
+        } 
     }
 })
-
-
-
-console.log(btn);
-
-console.log(btn.Eight.value)
-
-console.log(output * btn.Eight.value);
