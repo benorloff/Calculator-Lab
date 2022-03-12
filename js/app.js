@@ -1,7 +1,9 @@
 
+// Declare button
 
+const button = document.querySelectorAll('button');
 
-// Declare the buttons
+// Declare the calc buttons
 const btn = {
     CE: document.getElementById('btnCE'),
     Divide: document.getElementById('btnDivide'),
@@ -27,23 +29,33 @@ const btn = {
 const result = document.getElementById('result');
 
 //Set initial result of zero
-result.innerText = 
+let initialOutput = 0;
+let output = '';
+result.innerText = initialOutput;
 
-let output = 0;
+
+document.addEventListener('click', function buttonClick(e) {
+    if (e.target.tagName === 'BUTTON') {
+        if (result.innerText == initialOutput) {
+            output = e.target.value;
+            result.innerText = output;
+        }  
+        else if (result.innerText != initialOutput) {
+            if ((e.target.value !== '=') && (e.target.value !== 'C') && (e.target.value !== 'CE')) {
+                result.append(e.target.value);
+            } else if ((e.target.value === 'C') || (e.target.value === 'CE')) {
+                result.innerText = 0;
+            } else if (e.target.value === '=') {
+                console.log('The equal sign was pressed');
+            }
+        }
+    }
+})
+
+
 
 console.log(btn);
 
 console.log(btn.Eight.value)
-
-// btn.forEach(el => btn)
-
-
-// const button = document.querySelectorAll('button');
-
-// console.log(button.target.id);
-
-// btn{}.addEventListener('click', function buttonValue(e) {
-//     console.log(e.target.value);
-// });
 
 console.log(output * btn.Eight.value);
