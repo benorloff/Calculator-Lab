@@ -1,29 +1,7 @@
 
-// Declare button
+// Declare button element
 
 const button = document.querySelectorAll('button');
-
-// Declare the calc buttons
-const btn = {
-    CE: document.getElementById('btnCE'),
-    Divide: document.getElementById('btnDivide'),
-    Multiply: document.getElementById('btnMultiply'),
-    Seven: document.getElementById('btnSeven'),
-    Eight: document.getElementById('btnEight'),
-    Nine: document.getElementById('btnNine'),
-    C: document.getElementById('btnC'),
-    Four: document.getElementById('btnFour'),
-    Five: document.getElementById('btnFive'),
-    Six: document.getElementById('btnSix'),
-    Minus: document.getElementById('btnMinus'),
-    One: document.getElementById('btnOne'),
-    Two: document.getElementById('btnTwo'),
-    Three: document.getElementById('btnThree'),
-    Plus: document.getElementById('btnPlus'),
-    Zero: document.getElementById('btnZero'),
-    Dot: document.getElementById('btnDot'),
-    Equal: document.getElementById('btnEqual')
-}
 
 const nonInputVals = ['CE', 'C', '=']
 

@@ -12,39 +12,65 @@ body {
 button {
     border-radius: 5px;
     border: none;
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) calc(20px / 6);
 }
+
+button:first-child {
+    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) 0;
+}
+
+button:nth-child(2), button:nth-child(3) {
+    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) calc(20px / 6);
+}
+
+button:last-child {
+    margin: calc(20px / 6) 0 calc(20px / 6) calc(20px / 6);
+}
+
+
 
 .calc-container {
     background-color: var(--brown-bg-color);
-    width: 600px;
+    width: 320px;
+    height: 600px;
     margin: 0 auto;
 }
 
 .calc-body {
-    height: 100%;
+    position: relative;
+    width: 300px;
+    height: 530px;
+    top: 50px;
+    margin: 0 auto;
     background-color: var(--black-bg-color);
-    margin: 100px 10px 10px 10px;
 }
 
 .calc-screen {
+    position: relative;
     height: 100px;
     width: 100%;
-    border-radius: 10px;
-    border: var(--white-bg-color) 2px solid;
+    border-bottom: var(--white-bg-color) 2px solid;
 }
 
 .calc-output {
+    position: relative;
+    top: 25px;
     width: 100%;
     text-align: right;
 }
 
 .result {
-    width: 100%;
     color: var(--red-bg-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    padding: 0 20px 0 20px;
 }
 
 .calc-buttons {
-    width: 100%;
+    width: 275px;
+    margin: 20px auto;
 }
 
 .brown {
@@ -68,26 +94,15 @@ button {
 }
 
 .square {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .rectangle {
-    width: 75px;
-    height: 50px;
+    width: 95px;
+    height: 60px;
 }
 
-.btn-row-1 {
-}
-
-.btn-row-2 {
-}
-
-.btn-row-3 {
-}
-
-.btn-row-4 {
-}
-
-.btn-row-5 {
+.btn-row-1, .btn-row-2, .btn-row-3, .btn-row-4, .btn-row-5 {
+    height: calc(335px / 5);
 }
