@@ -12,11 +12,12 @@ body {
 
 button {
     position: relative;
+    display: inline-block;
     border-radius: 5px;
     border: none;
     font-family: 'Questrial', sans-serif;
     font-size: 30px;
-    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) calc(10% / 6);
+    margin: 7px 8px 8px 8px;
     padding: 0;
     filter: drop-shadow(0 5px 0 gray);
     -webkit-filter: drop-shadow(0 5px 0 gray);
@@ -34,23 +35,47 @@ button:active {
 }
 
 button:first-child {
-    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) 0;
+    margin: 7px 7px 7px 0;
 }
 
 button:nth-child(2), button:nth-child(3) {
-    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) calc(10% / 6);
+    margin: 7px 7px 7px 7px;
 }
 
 button:last-child {
-    margin: calc(10% / 6) 0 calc(10% / 6) calc(10% / 6);
+    margin: 7px 0 7px 7px;
+}
+
+.tog {
+    visibility: hidden;
+}
+
+.tog-container {
+}
+
+.tog-label {
+    font-size: 16px;
+}
+
+.tog-switch {
+
+}
+
+.switch-on {
+
+}
+
+.switch-off {
+
 }
 
 .calc-container {
     background-color: var(--brown-bg-color);
-    width: 340px;
+    width: 350px;
     height: 520px;
     margin: 0 auto;
     border-radius: 5px;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.1) );
     filter: drop-shadow(0 10px 0 gray);
 }
 
@@ -87,7 +112,7 @@ button:last-child {
 
 .calc-buttons {
     width: 92.5%;
-    margin: 15px auto;
+    margin: 15px;
     text-align: center;
 }
 
@@ -117,16 +142,17 @@ button:last-child {
 
 .square {
     width: 20%;
-    height: 60px;
+    height: 55px;
 }
 
 .rectangle {
-    width: 95px;
-    height: 60px;
+    width: 32.5%;
+    height: 55px;
 }
 
 .btn-row-1, .btn-row-2, .btn-row-3, .btn-row-4, .btn-row-5 {
     height: calc(335px / 5);
+    text-align: left;
 }
 
 .btn-row-1, .btn-row-2, .btn-row-3, .btn-row-4 {
