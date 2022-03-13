@@ -1,7 +1,32 @@
 
 // Declare button element
-
 const button = document.querySelectorAll('button');
+
+const btnArr = {
+    num: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'],
+    opr: ['/', '*', '-', '.'],
+    rst: ['CE', 'C'],
+    eql: ['=']
+}
+
+function btnVals() {
+    button.forEach(item => {
+        console.log(item.value)
+        if (Number.isInteger(parseInt(item.value, 10) != NaN)) {
+            console.log(item.value)
+            btnArr.num.push(`${item.value}`)
+        }
+    })
+}
+
+btnVals();
+
+// console.log(button)
+// console.log(button[4].value);
+// console.log(Number.isInteger(parseInt(button[4].value, 10)))
+// console.log(btnArr)
+
+
 
 // Declare the result span
 const result = document.getElementById('result');
@@ -30,8 +55,10 @@ document.addEventListener('click', function buttonClick(e) {
                 result.innerText = 0;
             // Run calculation on equal button click
             } else if (e.target.value === '=') {
-                console.log(eval(result.innerText.valueOf()));
                 result.innerText = (eval(result.innerText.valueOf()));
+                if (isNaN(result.innerText) === true) {
+                    result.innerText = 'ERR';
+                }
             }
         } 
     }
