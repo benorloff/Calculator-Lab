@@ -11,37 +11,52 @@ body {
 }
 
 button {
+    position: relative;
     border-radius: 5px;
     border: none;
     font-family: 'Questrial', sans-serif;
     font-size: 30px;
-    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) calc(20px / 6);
+    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) calc(10% / 6);
+    padding: 0;
+    filter: drop-shadow(0 5px 0 gray);
+    -webkit-filter: drop-shadow(0 5px 0 gray);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.1) );
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    filter: drop-shadow(0 2px 0 gray);
+    -webkit-filter: drop-shadow(0 2px 0 gray);
+    transition: translateY 0.1s ease-in-out;
+    -webkit-transition: translateY 0.1s ease-in-out;
 }
 
 button:first-child {
-    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) 0;
+    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) 0;
 }
 
 button:nth-child(2), button:nth-child(3) {
-    margin: calc(20px / 6) calc(20px / 6) calc(20px / 6) calc(20px / 6);
+    margin: calc(10% / 6) calc(10% / 6) calc(10% / 6) calc(10% / 6);
 }
 
 button:last-child {
-    margin: calc(20px / 6) 0 calc(20px / 6) calc(20px / 6);
+    margin: calc(10% / 6) 0 calc(10% / 6) calc(10% / 6);
 }
-
-
 
 .calc-container {
     background-color: var(--brown-bg-color);
-    width: 320px;
+    width: 340px;
     height: 520px;
     margin: 0 auto;
+    border-radius: 5px;
+    filter: drop-shadow(0 5px 0 gray);
 }
 
 .calc-body {
     position: relative;
-    width: 300px;
+    width: 92.5%;
     height: 490px;
     top: 15px;
     margin: 0 auto;
@@ -58,20 +73,22 @@ button:last-child {
 .calc-output {
     position: relative;
     top: 25px;
-    width: 100%;
+    width: 92.5%;
     text-align: right;
+    margin: 0 calc(7.5% / 2) 0 calc(7.5% / 2);
+    overflow-x: hidden;
 }
 
 .result {
     color: var(--red-bg-color);
     font-family: 'Orbitron', sans-serif;
     font-size: 36px;
-    padding: 0 20px 0 20px;
 }
 
 .calc-buttons {
-    width: 275px;
-    margin: 40px auto;
+    width: 92.5%;
+    margin: 15px auto;
+    text-align: center;
 }
 
 .brown {
@@ -94,8 +111,12 @@ button:last-child {
     background-color: var(--red-bg-color);
 }
 
+.empty {
+    visibility: hidden;
+}
+
 .square {
-    width: 60px;
+    width: 20%;
     height: 60px;
 }
 
@@ -106,4 +127,8 @@ button:last-child {
 
 .btn-row-1, .btn-row-2, .btn-row-3, .btn-row-4, .btn-row-5 {
     height: calc(335px / 5);
+}
+
+.btn-row-1, .btn-row-2, .btn-row-3, .btn-row-4 {
+    margin-bottom: 5px;
 }
