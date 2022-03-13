@@ -51,7 +51,7 @@ button:last-child {
     height: 520px;
     margin: 0 auto;
     border-radius: 5px;
-    filter: drop-shadow(0 5px 0 gray);
+    filter: drop-shadow(0 10px 0 gray);
 }
 
 .calc-body {

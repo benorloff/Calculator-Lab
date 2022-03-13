@@ -9,17 +9,17 @@ const btnArr = {
     eql: ['=']
 }
 
-function btnVals() {
-    button.forEach(item => {
-        console.log(item.value)
-        if (Number.isInteger(parseInt(item.value, 10) != NaN)) {
-            console.log(item.value)
-            btnArr.num.push(`${item.value}`)
-        }
-    })
-}
+// function btnVals() {
+//     button.forEach(item => {
+//         console.log(item.value)
+//         if (Number.isInteger(parseInt(item.value, 10) != NaN)) {
+//             console.log(item.value)
+//             btnArr.num.push(`${item.value}`)
+//         }
+//     })
+// }
 
-btnVals();
+// btnVals();
 
 // console.log(button)
 // console.log(button[4].value);
