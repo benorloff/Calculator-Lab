@@ -13,40 +13,37 @@ const btnArr = {
 // Declare the result span
 const result = document.getElementById('result');
 
-// Declare the calculation output.
-let finalTotal = 0;
-
 // Declare the total to store values during calculations. 
-let subTotal = 0;
+let total = 0;
 
 //Set initial result of zero
-result.innerText = subTotal;
+result.innerText = total;
 
 // Listen for button clicks
 document.addEventListener('click', function btnClick(btn) {
     // Filter out non-button clicks
     if (btn.target.tagName === 'BUTTON') {
         // Prevent leading zero
-        if (subTotal === 0) {
-            subTotal = btn.target.value;
-            result.innerText = subTotal;
-            console.log('subtotal is 0');
+        if (total === 0) {
+            // Prohibit 'CE' and 'C' when output is already 0
+            if (btnArr.rst.includes(btn.target.value) === false) {
+                total = btn.target.value;
+                result.innerText = total;
+            }
+        // Handle 'C' and 'CE' clicks
         } else if (btnArr.rst.includes(btn.target.value)) {
-            subTotal = 0;
-            result.innerText = subTotal;
-            console.log(`${btn.target.value} is a reset`);
-            console.log(subTotal);
+            total = 0;
+            result.innerText = total;
+        // Append number
         } else if ((Number.isInteger(parseInt((btn.target.value)))) || (btn.target.value === '.')) {
             result.append(btn.target.value);
-            console.log(`${btn.target.value} is a number`);
+        // Append operator
         } else if (btnArr.opr.includes(btn.target.value)) {
             result.append(btn.target.value);
-            console.log(`${btn.target.value} is an operator`);
+        // Evaluate result and update screen
         } else if (btnArr.eql.includes(btn.target.value)) {
-            subTotal = eval(result.innerText.valueOf());
-            result.innerText = subTotal;
-            console.log(subTotal)
-            console.log(`${btn.target.value} is an equal`);
+            total = eval(result.innerText.valueOf());
+            result.innerText = total;
         }
     }
 })

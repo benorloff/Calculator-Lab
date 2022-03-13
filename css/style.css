@@ -46,29 +46,6 @@ button:last-child {
     margin: 7px 0 7px 7px;
 }
 
-.tog {
-    visibility: hidden;
-}
-
-.tog-container {
-}
-
-.tog-label {
-    font-size: 16px;
-}
-
-.tog-switch {
-
-}
-
-.switch-on {
-
-}
-
-.switch-off {
-
-}
-
 .calc-container {
     background-color: var(--brown-bg-color);
     width: 350px;
